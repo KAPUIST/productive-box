@@ -1,17 +1,18 @@
 name: Update gist
 on:
-  repository_dispatch:
-    types: [build-event]
+  push:
+    branches:
+      - master
   schedule:
     - cron: "0 0 * * *"
 jobs:
   update-gist:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Update gist
         uses: maxam2017/productive-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: f9bbd6c6d9b4fbda6f1259da80a84f4b
+          GIST_ID: f9bbd6c6d9b4fbda6f1259da80a84f4b       
           TIMEZONE: Asia/Seoul
