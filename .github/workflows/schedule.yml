@@ -13,5 +13,5 @@ jobs:
         uses: maxam2017/productive-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: https://gist.github.com/KAPUIST/f9bbd6c6d9b4fbda6f1259da80a84f4b
+          GIST_ID: f9bbd6c6d9b4fbda6f1259da80a84f4b
           TIMEZONE: Asia/Seoul
